@@ -435,7 +435,7 @@ h1.site-title {
 
 h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	font-family: 'Quattrocento', sans-serif;
-	font-size: 35px;
+	font-size: 30px;
 	text-decoration: none;
 	color: #01264b;
 	margin-top: 40px;
@@ -468,14 +468,30 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding-top: 10px;
-	width: 20%;
+	width: 14.28%;
+	box-sizing: border-box;
 	border-right: 1px solid white;
+	height: 45px;
+	text-align: center;
 }
 
 .main-navigation a {
 	display: block;
+	padding-top: 10px;
 	text-decoration: none;
+	color: #ffffff;
+	width: 100%;
+	height: 45px;
+}
+
+.main-navigation li:last-child {
+	background-color:#82a7bb ;
+}
+
+.main-navigation a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #d24b3d;	
 }
 
 .main-navigation ul ul {

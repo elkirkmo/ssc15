@@ -17,7 +17,12 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<? /*
+		
+	I'm not a huge fan of Comments on Wordpress sites. They infinitely serve as the chief weakness of Wordpress and get spammed and hacked too often. I've commented out the comment feature here. Feel free to uncomment and style as needed if the feature is requested in the future. As for now, they'll remain blocked out.
+	
+	-CKMM
+	
 <div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
@@ -67,3 +72,4 @@ if ( post_password_required() ) {
 	<?php comment_form(); ?>
 
 </div><!-- #comments -->
+*/?>

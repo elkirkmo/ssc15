@@ -12,9 +12,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'ssc15' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'ssc15' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'ssc15' ), 'ssc15', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			Design and Development by <a href="http://chriskirkham.com/ck">CKMM</a>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

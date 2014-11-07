@@ -169,8 +169,10 @@ select,
 textarea {
 	color: #404040;
 	font-family: 'Quattrocento', sans-serif;
-	font-size: 16px;
+	font-size: 16px;/*
+
 	font-size: 1.6rem;
+*/
 	line-height: 1.5;
 }
 
@@ -832,3 +834,79 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+
+article.contact_posts {
+	width: 49%;
+	float: left;
+	border: 3px solid #01264b;
+	margin-top: 40px;
+	padding: 10px;
+}
+
+article.contact_posts:nth-child(odd){
+	margin-right: 2%;
+}
+
+.contact_posts img.contact-img {
+	border: 3px solid #d24b3d;
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.contact_posts header {
+	display: inline-block;
+}
+
+ .contact-mobile {
+	  display: none;
+  }
+  
+  .contact-full {
+	  display: block;
+  }
+
+
+@media (max-width: 960px) {
+	
+	article.contact_posts {
+	width: 90%;
+	margin: 20px auto;
+	display: block;
+	float: none;
+	padding: 0px;
+	}
+	
+	article.contact_posts:nth-child(odd){
+	margin-right: 20px;
+	}	
+	.contact_posts img.contact-img {
+		margin: 10px;
+	}
+	
+	.contact_posts header {
+		margin-top: 10px;
+	}
+
+	.contact-bottom-buttons {
+		clear: both;
+	}
+  .contact-button {
+    display: block;
+    width: 50%;
+    float: left;
+  }
+  
+  .contact-mobile {
+	  display: block;
+	  text-align: center
+  }
+  
+  .contact-full {
+	  display: none;
+  }
+

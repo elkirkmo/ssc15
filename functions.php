@@ -58,7 +58,7 @@ function ssc15_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside', 'image', 'video', 'quote', 'link', 
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -66,9 +66,38 @@ function ssc15_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
 }
 endif; // ssc15_setup
 add_action( 'after_setup_theme', 'ssc15_setup' );
+
+function contact_post_init() {
+    $args = array(
+      'label' => 'Contacts',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'contact-posts'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-id',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+        );
+    register_post_type( 'contact_posts', $args );
+}
+add_action( 'init', 'contact_post_init' );
+
 
 /**
  * Register widget area.
@@ -128,3 +157,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+

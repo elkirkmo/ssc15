@@ -578,6 +578,61 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	width: 50%;
 }
 
+/*-------------------------------------------------------------
+	Hamburger Nav
+-------------------------------------------------------------*/	
+body.admin-bar { 
+	position: relative;
+}
+
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%; /*This width has to correlate with the left-margin assigned in the hamburger menu function in scripts.js. It is currently set at 50%*/
+    z-index: 5;
+}
+
+#mobile_navigation {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #01264b;
+}
+
+.hamburger-menu {
+	height: 40px;
+	width: 100%;
+	display: none;
+	position: relative;
+	background-color: #01264b;
+}
+
+body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
+	margin-top: 45px;
+}
+
+.hamburger-menu a {
+	height: 40px;
+	width: 40px;
+	background-color: red;
+	display: block;
+}
+
+@media (max-width: 960px) {
+	.main-navigation {
+		display: none;
+	}
+	
+	.hamburger-menu {
+		display: block;
+	}
+	}
+
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -680,6 +735,12 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+
+#page {
+	background-color: white;
+position: absolute;
+}
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -711,6 +772,81 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+/*--------------------------------------------------------------
+10.1.6 Contact
+--------------------------------------------------------------*/
+
+article.contact_posts {
+	width: 49%;
+	float: left;
+	border: 3px solid #01264b;
+	margin-top: 40px;
+	padding: 10px;
+}
+
+article.contact_posts:nth-child(odd){
+	margin-right: 2%;
+}
+
+.contact_posts img.contact-img {
+	border: 3px solid #d24b3d;
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.contact_posts header {
+	display: inline-block;
+}
+
+ .contact-mobile {
+	  display: none;
+  }
+  
+  .contact-full {
+	  display: block;
+  }
+
+
+@media (max-width: 960px) {
+	
+	article.contact_posts {
+	width: 90%;
+	margin: 20px auto;
+	display: block;
+	float: none;
+	padding: 0px;
+	}
+	
+	article.contact_posts:nth-child(odd){
+	margin-right: 20px;
+	}	
+	.contact_posts img.contact-img {
+		margin: 10px;
+	}
+	
+	.contact_posts header {
+		margin-top: 10px;
+	}
+
+	.contact-bottom-buttons {
+		clear: both;
+	}
+  .contact-button {
+    display: block;
+    width: 50%;
+    float: left;
+  }
+  
+  .contact-mobile {
+	  display: block;
+	  text-align: center
+  }
+  
+  .contact-full {
+	  display: none;
+  }
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -835,78 +971,5 @@ object {
 	display: block;
 }
 
-/*--------------------------------------------------------------
-12.2 Galleries
---------------------------------------------------------------*/
 
-article.contact_posts {
-	width: 49%;
-	float: left;
-	border: 3px solid #01264b;
-	margin-top: 40px;
-	padding: 10px;
-}
-
-article.contact_posts:nth-child(odd){
-	margin-right: 2%;
-}
-
-.contact_posts img.contact-img {
-	border: 3px solid #d24b3d;
-	float: left;
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.contact_posts header {
-	display: inline-block;
-}
-
- .contact-mobile {
-	  display: none;
-  }
-  
-  .contact-full {
-	  display: block;
-  }
-
-
-@media (max-width: 960px) {
-	
-	article.contact_posts {
-	width: 90%;
-	margin: 20px auto;
-	display: block;
-	float: none;
-	padding: 0px;
-	}
-	
-	article.contact_posts:nth-child(odd){
-	margin-right: 20px;
-	}	
-	.contact_posts img.contact-img {
-		margin: 10px;
-	}
-	
-	.contact_posts header {
-		margin-top: 10px;
-	}
-
-	.contact-bottom-buttons {
-		clear: both;
-	}
-  .contact-button {
-    display: block;
-    width: 50%;
-    float: left;
-  }
-  
-  .contact-mobile {
-	  display: block;
-	  text-align: center
-  }
-  
-  .contact-full {
-	  display: none;
-  }
 

@@ -14,13 +14,22 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<nav id="mobile_navigation" class="mobile-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
+	</nav><!-- #mobile_navigation -->
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ssc15' ); ?></a>
+	<div id="contentLayer" style="display: none;"></div>
+	<div class="hamburger-menu">
+		<a></a>
+	</div>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">

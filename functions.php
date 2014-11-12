@@ -158,5 +158,137 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+/**
+	* Include Advanced Custom Fields
+	*/
+
+include_once('advanced-custom-fields/acf.php');
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_contact-post',
+		'title' => 'Contact Post',
+		'fields' => array (
+			array (
+				'key' => 'field_545c74f1303f9',
+				'label' => 'Contact Image',
+				'name' => 'contact_image',
+				'type' => 'image',
+				'instructions' => 'Add an image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'uploadedTo',
+			),
+			array (
+				'key' => 'field_545c59ef768d8',
+				'label' => 'Job Title',
+				'name' => 'job_title',
+				'type' => 'text',
+				'instructions' => 'Fill in the job title of the employee',
+				'default_value' => '',
+				'placeholder' => 'Job Title',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_545c6097d304d',
+				'label' => 'Contact Address',
+				'name' => 'contact_address',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => 'Where does this person receive mail?',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_545c6be9887d4',
+				'label' => 'Country Code',
+				'name' => 'contact_country_code',
+				'type' => 'text',
+				'instructions' => 'Enter the numeric country code for the phone number.',
+				'default_value' => '+1',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_545c60cc9e623',
+				'label' => 'Contact Number',
+				'name' => 'contact_number',
+				'type' => 'text',
+				'instructions' => 'Enter Contact\'s Phone Number',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_545c619c8ffce',
+				'label' => 'Contact Email',
+				'name' => 'contact_email',
+				'type' => 'email',
+				'instructions' => 'What is the contact\'s email',
+				'default_value' => '',
+				'placeholder' => 'Contact Email',
+				'prepend' => '',
+				'append' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'contact_posts',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'author',
+				7 => 'format',
+				8 => 'categories',
+				9 => 'tags',
+				10 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+}
 
 
+/**
+	Adding login/logout buttons
+**/
+
+add_filter( 'wp_nav_menu_items', 'wti_loginout_menu_link', 10, 2 );
+
+function wti_loginout_menu_link( $items, $args ) {
+      if (is_user_logged_in()) {
+         $items .= '<li class="right"><a href="log-out">Log Out</a></li>';
+      } else {
+         $items .= '<li class="right"><a href="log-in">Log In</a></li>';
+}
+   return $items;
+}
+
+
+	

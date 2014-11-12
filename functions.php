@@ -283,9 +283,9 @@ add_filter( 'wp_nav_menu_items', 'wti_loginout_menu_link', 10, 2 );
 
 function wti_loginout_menu_link( $items, $args ) {
       if (is_user_logged_in()) {
-         $items .= '<li class="right"><a href="log-out">Log Out</a></li>';
+         $items .= '<li class="right"><a href="'.get_site_url().'/log-out">Log Out</a></li>';
       } else {
-         $items .= '<li class="right"><a href="log-in">Log In</a></li>';
+         $items .= '<li class="right"><a href="'.get_site_url().'/log-in">Log In</a></li>';
 }
    return $items;
 }

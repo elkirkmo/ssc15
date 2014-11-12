@@ -3,10 +3,10 @@ jQuery(document).ready(function(){
 	 jQuery(".hamburger-menu a").click(function() {
     	//set the width of primary content container -> content should not scale while animating
 		var contentWidth = jQuery('#page').width();
-				
-        jQuery('#page').css('min-height', jQuery(window).height());
+		var contentHeight = jQuery(window).height();		
+        jQuery('#page').css('min-height', contentHeight);
 
-        jQuery('#mobile_navigation').css('opacity', 1);
+        jQuery('#mobile_navigation').css({'opacity': 1, 'height' : contentHeight });
 
         //set the width of primary content container -> content should not scale while animating
         var contentWidth = jQuery('#page').width();
@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
     jQuery("#page").animate({"marginLeft": ["0", 'easeOutExpo']}, {
         duration: 700,
         complete: function() {
-              jQuery('#page').css('width', 'auto');
+              jQuery('#page').css('width', '100%');
 			  jQuery('#contentLayer').css('display', 'none');
  
         }

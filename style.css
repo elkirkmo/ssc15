@@ -442,6 +442,12 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	color: #01264b;
 	margin-top: 40px;
 }
+@media screen and (max-width: 680px) {
+	h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {	
+	font-family: 'Quattrocento', sans-serif;
+	font-size: 18px;
+	}
+}
 
 
 /*--------------------------------------------------------------
@@ -598,7 +604,7 @@ body.admin-bar {
 }
 
 #mobile_navigation {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: #01264b;
@@ -621,6 +627,25 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 	width: 40px;
 	background-color: red;
 	display: block;
+}
+
+#menu-mobile-menu li {
+ 	list-style: none;
+ 	border-bottom: 1px solid white;
+ 	padding: 7px 0;
+ 	width: 39%;	
+}
+
+#menu-mobile-menu li:last-of-type {
+	margin-top: 40px;
+}
+ 
+#menu-mobile-menu li a {
+ 	text-decoration: none;
+ 	color: white;
+ 	letter-spacing: 1px;
+ 	text-shadow: 0px 1px 5px rgba(0,0,0,.6);
+ 	
 }
 
 @media (max-width: 960px) {

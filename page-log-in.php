@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<h2>Login</h2>
+			<h2>Already Registered? Log in Here</h2>
 			<?php wp_login_form( $args ); ?> 
 			<?php $args = array(
 			        'echo'           => true,
@@ -33,7 +33,7 @@ get_header(); ?>
 			        'value_username' => NULL,
 			        'value_remember' => true
 			); ?> 
-			
+			<h2>Already Registered? Log in Here</h2>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

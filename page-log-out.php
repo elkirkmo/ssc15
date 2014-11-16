@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file.
+ * Template name: My Account
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -15,13 +15,12 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<h2>Logout</h2>
-<a href="<?php echo wp_logout_url('index.php'); ?>" title="Logout">Logout From Site
-</a>
-		<?php if ( have_posts() ) : ?>
+			<h2>Logout</h2>
+				<a href="<?php echo wp_logout_url('index.php'); ?>" title="Logout">Logout From Site</a>
+				<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.

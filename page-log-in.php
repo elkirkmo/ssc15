@@ -15,11 +15,16 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<div class="log-in-left">
+			<h2>Register for the 2015 Sea Scout Cup</h2>
+			
+		</div>		
+		<div class="log-in-right">
 			<h2>Already Registered? Log in Here</h2>
 			<?php wp_login_form( $args ); ?> 
 			<?php $args = array(
 			        'echo'           => true,
-			        'redirect'       => site_url( '/participate/' ), 
+			        'redirect'       => site_url( '/my-account/' ), 
 			        'form_id'        => 'loginform',
 			        'label_username' => __( 'Username' ),
 			        'label_password' => __( 'Password' ),
@@ -33,7 +38,7 @@ get_header(); ?>
 			        'value_username' => NULL,
 			        'value_remember' => true
 			); ?> 
-			<h2>Already Registered? Log in Here</h2>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -290,5 +290,62 @@ function wti_loginout_menu_link( $items, $args ) {
    return $items;
 }
 
+/*Adding custom profile fields
+
+	<!--
+				Gender
+				First Name
+				Middle Name
+				Last Name
+				Birth Date(dd dates)
+				Passport number (if intl)
+				Passport country (if intl)(dd)
+				Driver License #
+				Driver License State(dd)
+				Driver License Expiration(dd dates)
+				Username
+				Password
+				Verify Password
+				Email Address
+				Street Address
+				City
+				State(dd)
+				Postal Code
+				Country(dd)
+				Phone Number
+				Alt Phone Number
+				Cell Phone
+				Fax Number
+				Shirt Size (dd)
+				
+				*/
+
+
+function modify_contact_methods($profile_fields) {
+
+	// Add new fields
+	$profile_fields['middle_name'] = 'Middle Name';
+	$profile_fields['user_gender'] = 'Gender';
+	$profile_fields['birthdate'] = 'Birthdate';
+	$profile_fields['passport_number'] = 'Passport Number';
+	$profile_fields['passport_country'] = 'Passport Country';
+	$profile_fields['driver_license'] = 'Driver License';	
+	$profile_fields['driver_license_state'] = 'Driver License State';
+	$profile_fields['driver_license_expiration'] = 'Driver License Expiration';	
+	$profile_fields['user_city'] = 'User City';
+	$profile_fields['user_state'] = 'User State';
+	$profile_fields['user_zip'] = 'Postal Code';	
+	$profile_fields['user_phone'] = 'Phone Number';	
+	$profile_fields['user_phone_alt'] = 'Alternate Phone Number';
+	$profile_fields['user_cell'] = 'Cell Number';
+	$profile_fields['user_fax'] = 'Fax Number';
+	$profile_fields['user_shirt'] = 'Shirt Size';	
+
+	// Remove old fields
+	unset($profile_fields['aim']);	
+
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
 
 	

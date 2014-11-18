@@ -276,7 +276,7 @@ if(function_exists("register_field_group"))
 
 
 /**
-	Adding login/logout buttons
+	Adding login/my profile buttons
 **/
 
 add_filter( 'wp_nav_menu_items', 'wti_loginout_menu_link', 10, 2 );
@@ -290,9 +290,9 @@ function wti_loginout_menu_link( $items, $args ) {
    return $items;
 }
 
-/*Adding custom profile fields
+/*
+	Adding custom profile fields to use in registration
 
-	<!--
 				Gender
 				First Name
 				Middle Name

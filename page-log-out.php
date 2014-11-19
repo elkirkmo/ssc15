@@ -65,16 +65,26 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<h2>My Account</h2>
-				<header>
-					<h2> View Profile</h2>
+				<header class="my-account ">
+					<h2 class="active"> View Profile</h2>
 					<h2> Edit Profile</h2>
 				</header>
-			<div id="view_profile" class="left view-profile">
+			<div id="view_profile" class="left view-profile my-account-section active">
+				<h3>Hi, <?php echo the_author_meta('first_name', $current_user->ID ); ?>!</h3>
+			<ul class="reg-complete">
+				<h2>The following items have been completed</h2>
+				<li>Registration Form</li>
+				<li>Medical Form</li>
+			</ul>
 			
-					<a href="<?php echo wp_logout_url('index.php'); ?>" title="Logout">Logout From Site</a>
+			<ul class="reg-incomplete">
+				<h2>The following items still need to be completed</h2>
+				<li>Payment</li>
+				<li>Registration Form</li>				
+			</ul>
+					<a href="<?php echo wp_logout_url('index.php'); ?>" class="logout button" title="Logout">Logout From Site</a>
 			</div>
-			<div id="edit_profile" class="right edit-profile">
+			<div id="edit_profile" class="right edit-profile my-account-section">
 			<!--
 				Gender
 				First Name

@@ -47,8 +47,12 @@ jQuery(document).ready(function(){
         }
 
     });
-
-    
 });
+
+//My Account Toggle buttons
+    jQuery(".my-account h2").on("click", function() {
+	    jQuery(".my-account h2, .my-account-section").toggleClass("active");
+		
+    });
 
 });

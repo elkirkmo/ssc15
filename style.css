@@ -460,7 +460,23 @@ h1.entry-title {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
+a.button {
+	padding: 10px;
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	color: white;
+	background-color:#d24b3d ;
+	text-align: center;
+	text-decoration: none;
+	font-family: "raleway";
+	font-size: 20px;
+}
 
+a.button:hover {
+	color: white;
+	background-color:#82a7bb;
+}
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -771,7 +787,8 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 #page {
 	background-color: white;
 position: absolute;
-width: 100%
+width: 100%;
+min-height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -804,6 +821,39 @@ width: 100%
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+
+/*--------------------------------------------------------------
+10.1.4 My Account / Login Page
+--------------------------------------------------------------*/
+header.my-account{
+	margin: 20px 0;
+	
+	white-space: nowrap;
+}
+header.my-account h2 {
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	background: #01264b;
+	color: #d6e1e7;
+	padding: 10px 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+header.my-account h2.active {
+	background: #82a7bb;
+}
+
+.my-account-section {
+	display: none;
+}
+
+.my-account-section.active {
+	display: block;
 }
 
 /*--------------------------------------------------------------

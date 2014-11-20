@@ -15,11 +15,15 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div class="log-in-left">
+		<header class="my-account ">
+					<h2 class="active">Create Account</h2>
+					<h2>Log In</h2>
+				</header>
+		<div class="log-in-left my-account-section active">
 			<h2>Register for the 2015 Sea Scout Cup</h2>
 			
 		</div>		
-		<div class="log-in-right">
+		<div class="log-in-right my-account-section">
 			<h2>Already Registered? Log in Here</h2>
 			<?php wp_login_form( $args ); ?> 
 			<?php $args = array(

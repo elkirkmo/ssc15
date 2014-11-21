@@ -80,7 +80,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
 			<ul class="reg-incomplete">
 				<h2>The following items still need to be completed</h2>
 				<li>Payment</li>
-				<li>Registration Form</li>				
+				<li>Create Login</li>				
 			</ul>
 					<a href="<?php echo wp_logout_url('index.php'); ?>" class="logout button" title="Logout">Logout From Site</a>
 			</div>

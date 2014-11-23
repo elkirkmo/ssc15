@@ -801,7 +801,7 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 	background-color: white;
 position: absolute;
 width: 100%;
-min-height: 100%;
+height: auto;
 }
 
 .site-header, .site-content {

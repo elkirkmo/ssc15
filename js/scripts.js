@@ -1,9 +1,25 @@
 jQuery(document).ready(function(){	
+
+
 	jQuery(function(){
-  var mySwiper = $('.swiper-container').swiper({
+  var mySwiper = jQuery('.swiper-container').swiper({
     //Your options here:
     mode:'horizontal',
-    loop: true
+    loop: true,
+    onFirstInit: function(swiper){
+	      jQuery('.swiper-container').css({height:''})
+		  //Calc Height
+		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height()})
+		  //ReInit Swiper
+		  //swiper.reInit();
+    	},
+    onSlideChangeEnd: function(){
+	      jQuery('.swiper-container').css({height:''})
+		  //Calc Height
+		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height()})
+		  //ReInit Swiper
+		  mySwiper.reInit();
+    	}
     //etc..
   });
 });

@@ -1,12 +1,12 @@
 jQuery(document).ready(function(){	
-	$(function(){
+	jQuery(function(){
   var mySwiper = $('.swiper-container').swiper({
     //Your options here:
     mode:'horizontal',
     loop: true
     //etc..
   });
-})
+});
 	
 	 jQuery(".hamburger-menu a").click(function() {
     	//set the width of primary content container -> content should not scale while animating

@@ -784,6 +784,19 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 10.0 Content
 --------------------------------------------------------------*/
 
+#primary {
+	width: 70%;
+	float: left;
+}
+
+#secondary {
+	width: 30%;
+	float: left;
+	display: block;
+	height: auto;
+	border: 3px solid red
+}
+
 #page {
 	background-color: white;
 position: absolute;

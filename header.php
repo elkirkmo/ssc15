@@ -19,7 +19,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
  <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style/idangerous.swiper.css">
-  <script defer src="<?php bloginfo('template_directory');?>/js/idangerous.swiper.js"></script>
+ <script src="https://platform.twitter.com/widgets.js"></script>
+ <script defer src="<?php bloginfo('template_directory');?>/js/idangerous.swiper.js"></script>
 <?php wp_head(); 
 	add_filter('show_admin_bar', '__return_false');	
 ?>

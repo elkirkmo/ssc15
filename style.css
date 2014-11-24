@@ -790,22 +790,92 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 }
 
 #secondary {
-	width: 30%;
+	margin-left: 1%;
+	width: 29%;
 	float: left;
 	display: block;
 	height: auto;
-	border: 3px solid red
+	margin-top: 20px;
+	background: #82a7bb;
 }
+
+.widget {
+	margin: 0;
+}
+#secondary aside {
+	clear: both;
+}
+
+#secondary aside a {
+	text-decoration: none;
+	color: white;
+}
+
+@media (max-width: 960px) {
+	#primary {
+	width: 100%;
+}
+#secondary {
+	width: 100%;
+}
+
+	}
 
 #page {
 	background-color: white;
-position: absolute;
-width: 100%;
-height: auto;
+	position: absolute;
+	width: 100%;
+	height: auto;
 }
 
 .site-header, .site-content {
 	padding: 0 5%;
+}
+
+.tp_recent_tweets, .widget_wordpress-tweets {
+	margin: 20px;
+}
+
+.tp_recent_tweets ul, #tweets {
+	margin: 0;
+}
+
+.tp_recent_tweets ul li, #tweets li {
+	background: none;
+	padding: 0;
+	color: white;
+	text-shadow: 0px 1px 5px #474747;
+}
+
+.tp_recent_tweets ul li a, #tweets li a {
+	color: white;
+	text-decoration: none;
+}
+
+.tweet_link {
+	float: right;	
+	margin-bottom: 20px;
+}
+
+.twitter_time {
+	display: none;
+}
+
+.follow_button {
+	background: #01264b;
+	height: 45px;
+	padding: 10px;
+}
+
+.follow_button a {
+	text-align: center;
+	display: block;
+}
+
+
+.APTFIN_by_TAP {
+	background: #d24b3d;
+	padding: 10px;	
 }
 
 /*--------------------------------------------------------------

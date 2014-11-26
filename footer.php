@@ -19,6 +19,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="<?php bloginfo('template_directory');?>/js/scripts.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/scripts.js"></script>+
+
+  <script src="<?php bloginfo('template_directory');?>/js/jquery.fitvids.js"></script>
+  <script src="<?php bloginfo('template_directory');?>/js/jquery-scrolltofixed-min.js"></script>
 </body>
 </html>

@@ -799,6 +799,11 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 	background: #82a7bb;
 }
 
+.content-area.home {
+	
+margin-top: 20px;
+}
+
 .widget {
 	margin: 0;
 }

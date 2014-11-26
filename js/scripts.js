@@ -78,5 +78,6 @@ jQuery(document).ready(function(){
 	    jQuery(".my-account h2, .my-account-section").toggleClass("active");
 		
     });
-
+    
+   jQuery("#primary").fitVids();
 });

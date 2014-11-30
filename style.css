@@ -499,7 +499,7 @@ a.button:hover {
 .main-navigation li {
 	float: left;
 	position: relative;
-	width: 14.28%;
+	width: 14.285714286%;
 	box-sizing: border-box;
 	border-right: 1px solid white;
 	height: 45px;
@@ -532,6 +532,9 @@ a.button:hover {
 	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
+	margin-top: 22px;
+	width: 100%;
+	margin-left: -1px;
 }
 
 .main-navigation ul ul ul {
@@ -540,12 +543,17 @@ a.button:hover {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 100%;
 }
 
 .main-navigation ul ul li {
-
+	width: 100%;
+	box-sizing: content-box;
+	border: 1px solid white;
+	border-top: none;
+	background-color: #82a7bb;
 }
+
 
 .main-navigation li:hover > a {
 }
@@ -799,6 +807,10 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 	background: #82a7bb;
 }
 
+#secondary .AlpinePhotoTiles-image {
+	width: 100%;
+}
+
 .content-area.home {
 	
 margin-top: 20px;
@@ -867,14 +879,32 @@ margin-top: 20px;
 }
 
 .follow_button {
-	background: #01264b;
+	background-color: #01264b;
 	height: 45px;
 	padding: 10px;
 }
 
+.follow_button.twitter {
+	background: #01264b url("images/twitter-logo-secondary.png") no-repeat 18px 11px;
+}
+
+.follow_button.instagram .instagram-logo {
+	border: 1px solid red;
+	width: 130px;
+	display: inline-block;
+	background: url("images/twitter-logo-secondary.png") no-repeat 18px 11px;
+}
+
+.follow_button.twitter a {
+	margin-left: 45px;
+}
+
 .follow_button a {
-	text-align: center;
 	display: block;
+}
+
+.home-video {
+	visibility: hidden;
 }
 
 
@@ -973,6 +1003,11 @@ article.contact_posts:nth-child(odd){
 
 .contact_posts header {
 	display: inline-block;
+}
+
+.contact_posts header h1 {
+	font-size: 30px;
+	font-family: "Quattrocento";
 }
 
  .contact-mobile {

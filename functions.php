@@ -99,6 +99,32 @@ function contact_post_init() {
 }
 add_action( 'init', 'contact_post_init' );
 
+function past_years_post_init() {
+    $args = array(
+      'label' => 'Past Years',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'past-years-posts'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-awards',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+        );
+    register_post_type( 'past_years_posts', $args );
+}
+add_action( 'init', 'past_years_post_init' );
+
 
 /**
  * Register widget area.

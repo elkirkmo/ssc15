@@ -23,5 +23,6 @@
 
   <script src="<?php bloginfo('template_directory');?>/js/jquery.fitvids.js"></script>
   <script src="<?php bloginfo('template_directory');?>/js/jquery-scrolltofixed-min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/retina.js"></script>
 </body>
 </html>

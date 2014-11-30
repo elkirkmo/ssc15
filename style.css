@@ -888,11 +888,8 @@ margin-top: 20px;
 	background: #01264b url("images/twitter-logo-secondary.png") no-repeat 18px 11px;
 }
 
-.follow_button.instagram .instagram-logo {
-	border: 1px solid red;
-	width: 130px;
-	display: inline-block;
-	background: url("images/twitter-logo-secondary.png") no-repeat 18px 11px;
+.follow_button.instagram {
+	background: #01264b url("images/instagram-logo-secondary.png") no-repeat 18px 11px;
 }
 
 .follow_button.twitter a {

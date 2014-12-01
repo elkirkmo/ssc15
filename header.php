@@ -17,13 +17,21 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
-<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
  <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style/idangerous.swiper.css">
  <script src="https://platform.twitter.com/widgets.js"></script>
  <script defer src="<?php bloginfo('template_directory');?>/js/idangerous.swiper.js"></script>
 <?php wp_head(); 
 	add_filter('show_admin_bar', '__return_false');	
 ?>
+<?//overriding the adminbar css bug ?>
+<style type="text/css" media="screen">
+	html { margin-top: 0px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 0px !important; }
+		* html body { margin-top: 0px !important; }
+	}
+</style>
 </head>
 
 <body <?php body_class(); ?>>

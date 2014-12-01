@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php
-				$query = new WP_Query( array('post_type' => 'contact_posts', 'posts_per_page' => 5 ) );
+				$query = new WP_Query( array('post_type' => 'contact_posts', 'posts_per_page' => 10, 'order' => 'ASC' ) );
 				while ( $query->have_posts() ) : $query->the_post(); ?>
 				
 					<?php get_template_part( 'content', 'page-contact_posts' ); ?>

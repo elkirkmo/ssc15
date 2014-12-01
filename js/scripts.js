@@ -85,7 +85,17 @@ jQuery(document).ready(function(){
    
    if (jQuery("body").hasClass('logged-in')){
 	   jQuery(".sub-menu a[title='registration']").parent("li").show();
+	   jQuery("html").css("margin-top","0px");
 	   } else {
 	   jQuery(".sub-menu a[title='registration']").parent("li").hide();		   
 	   }
+	   
+	jQuery(".contact-number a").each(function(){
+		if (jQuery(this).attr("href") === "tel:+1"){
+			jQuery(this).parent(".contact-button").hide();
+			jQuery(this).parent(".contact-button").next(".contact-button").css("width","100%");
+		}
+	});   
+	   
+	   
 });

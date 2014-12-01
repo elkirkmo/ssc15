@@ -19,6 +19,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 <script src="<?php bloginfo('template_directory');?>/js/scripts.js"></script>+
 
   <script src="<?php bloginfo('template_directory');?>/js/jquery.fitvids.js"></script>

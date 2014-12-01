@@ -188,14 +188,27 @@ require get_template_directory() . '/inc/jetpack.php';
 	* Include Advanced Custom Fields
 	*/
 
-include_once('advanced-custom-fields/acf.php');
 
+include_once('advanced-custom-fields/acf.php');
+/*
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_contact-post',
 		'title' => 'Contact Post',
 		'fields' => array (
+			array (
+				'key' => 'field_547b9f0512199',
+				'label' => 'Job Title',
+				'name' => 'job_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
 			array (
 				'key' => 'field_545c74f1303f9',
 				'label' => 'Contact Image',
@@ -205,6 +218,43 @@ if(function_exists("register_field_group"))
 				'save_format' => 'object',
 				'preview_size' => 'thumbnail',
 				'library' => 'uploadedTo',
+			),
+			array (
+				'key' => 'field_545c6be9887d4',
+				'label' => 'Country Code',
+				'name' => 'contact_country_code',
+				'type' => 'text',
+				'instructions' => 'Enter the numeric country code for the phone number.',
+				'default_value' => '+1',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_545c60cc9e623',
+				'label' => 'Contact Number',
+				'name' => 'contact_number',
+				'type' => 'text',
+				'instructions' => 'Enter Contact\'s Phone Number',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_545c619c8ffce',
+				'label' => 'Contact Email',
+				'name' => 'contact_email',
+				'type' => 'email',
+				'instructions' => 'What is the contact\'s email',
+				'default_value' => '',
+				'placeholder' => 'Contact Email',
+				'prepend' => '',
+				'append' => '',
 			),
 		),
 		'location' => array (
@@ -238,63 +288,81 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
+		'id' => 'acf_global-elements',
+		'title' => 'Global Elements',
+		'fields' => array (
+			array (
+				'key' => 'field_547b988afae03',
+				'label' => '',
+				'name' => '',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'ef_user',
+					'operator' => '==',
+					'value' => 'all',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_home-page',
+		'title' => 'Home Page',
+		'fields' => array (
+			array (
+				'key' => 'field_54751bd8258c6',
+				'label' => 'Homepage Video Link',
+				'name' => 'homepage_video_link',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '2',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
 		'id' => 'acf_info-section',
 		'title' => 'Info Section',
 		'fields' => array (
-			array (
-				'key' => 'field_546ee47599540',
-				'label' => 'Koch Bio Header',
-				'name' => 'koch_bio_header',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_546ee48099541',
-				'label' => 'Koch Bio Body',
-				'name' => 'koch_bio_body',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_546ee4933673a',
-				'label' => 'Qualifying Races Header',
-				'name' => 'qualifying_races_header',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_546ee4a13673b',
-				'label' => 'Qualifying Races Body',
-				'name' => 'qualifying_races_body',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_546ee4ae3673c',
-				'label' => 'Application Header',
-				'name' => 'application_header',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
 			array (
 				'key' => 'field_546ee4b93673d',
 				'label' => 'Application Body',
@@ -324,7 +392,32 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	register_field_group(array (
+		'id' => 'acf_past-years',
+		'title' => 'Past Years',
+		'fields' => array (
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'past_years_posts',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
+*/
 
 /**
 	Adding login/my profile buttons

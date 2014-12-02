@@ -681,6 +681,10 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 }
 
 @media (max-width: 960px) {
+	
+	#mobile_navigation {
+		display: block;
+		}
 	.main-navigation {
 		display: none;
 	}

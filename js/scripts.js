@@ -81,8 +81,9 @@ jQuery(document).ready(function(){
     
    jQuery("#primary").fitVids();
    jQuery(".home-video").css("visibility","visible");
-   jQuery('#secondary').scrollToFixed();
-   
+   if (jQuery(window).width() > 960){
+   		jQuery('#secondary').scrollToFixed();
+   }
    if (jQuery("body").hasClass('logged-in')){
 	   jQuery(".sub-menu a[title='registration']").parent("li").show();
 	   jQuery("html").css("margin-top","0px");

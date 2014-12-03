@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="swiper-container">
   <div class="swiper-wrapper">
       <!--First Slide-->
-      <div class="swiper-slide"> 
+      <div class="swiper-slide info"> 
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop.  ?>
       </div>	 
        <div class="swiper-slide"> 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class("bio"); ?>>
 		<header class="entry-header">
 			 <h1 class="entry-title"><?php echo get_field('koch_bio_header'); ?></h1>
 		</header><!-- .entry-header -->
@@ -44,7 +44,7 @@ get_header(); ?>
 	</article><!-- #post-## -->
        </div>
         <div class="swiper-slide"> 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class("qualifying-races"); ?>>
 		<header class="entry-header">
 			 <h1 class="entry-title"><?php echo get_field('qualifying_races_header'); ?></h1>
 		</header><!-- .entry-header -->
@@ -55,7 +55,7 @@ get_header(); ?>
 	</article><!-- #post-## -->
         </div>
          <div class="swiper-slide"> 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class("applications"); ?>>
 		<header class="entry-header">
 			 <h1 class="entry-title"><?php echo get_field('application_header'); ?></h1>
 		</header><!-- .entry-header -->

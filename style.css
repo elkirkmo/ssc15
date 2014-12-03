@@ -865,15 +865,7 @@ margin-top: 20px;
 	color: white;
 }
 
-@media (max-width: 960px) {
-	#primary {
-	width: 100%;
-}
-#secondary {
-	width: 100%;
-}
 
-	}
 
 #page {
 	background-color: white;
@@ -946,6 +938,21 @@ margin-top: 20px;
 	background: #d24b3d;
 	padding: 10px;	
 }
+
+@media (max-width: 960px) {
+	#primary {
+	width: 100%;
+}
+#secondary {
+	width: 100%;
+}
+
+.follow_button.instagram a{
+	margin-top: 5px;
+	font-size: 13px;
+}
+
+	}
 
 /*--------------------------------------------------------------
 10.0.3 Footer

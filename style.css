@@ -35,6 +35,7 @@ font-family: 'Raleway', sans-serif;
 */
 
 
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -442,19 +443,31 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	color: #01264b;
 	margin-top: 40px;
 }
+
+
+h1.entry-title {
+	font-size: 50px;
+	font-family: "raleway";
+	text-align: center;
+	
+}
+
+
 @media screen and (max-width: 680px) {
 	h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {	
 	font-family: 'Quattrocento', sans-serif;
 	font-size: 18px;
 	}
+	
+	h1.entry-title {
+			font-size: 35px;
+	}
+	
+	h2.site-description {
+		font-size: 13px;
+	}
 }
 
-h1.entry-title {
-	font-size: 150px;
-	font-family: "raleway";
-	text-align: center;
-	
-}
 
 
 /*--------------------------------------------------------------
@@ -657,7 +670,7 @@ body.admin-bar .hamburger-menu, body.admin-bar #mobile_navigation {
 .hamburger-menu a {
 	height: 40px;
 	width: 40px;
-	background-color: red;
+	background: url("images/hamburger-nav-icon.png") no-repeat center center;
 	display: block;
 }
 

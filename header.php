@@ -32,6 +32,7 @@
 		* html body { margin-top: 0px !important; }
 	}
 </style>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -20,28 +20,19 @@ get_header(); ?>
 					<h2>Log In</h2>
 				</header>
 		<div class="log-in-left my-account-section active">
-			<h2>Register for the 2015 Sea Scout Cup</h2>
 			
+			<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php get_template_part( 'content', 'page-log-in' ); ?>
+
+		<?php endwhile; // end of the loop. ?>			
+		
+		<?php echo do_shortcode('[wppb-register]'); ?>
+		
 		</div>		
 		<div class="log-in-right my-account-section">
 			<h2>Already Registered? Log in Here</h2>
-			<?php wp_login_form( $args ); ?> 
-			<?php $args = array(
-			        'echo'           => true,
-			        'redirect'       => site_url( '/my-account/' ), 
-			        'form_id'        => 'loginform',
-			        'label_username' => __( 'Username' ),
-			        'label_password' => __( 'Password' ),
-			        'label_remember' => __( 'Remember Me' ),
-			        'label_log_in'   => __( 'Log In' ),
-			        'id_username'    => 'user_login',
-			        'id_password'    => 'user_pass',
-			        'id_remember'    => 'rememberme',
-			        'id_submit'      => 'login-submit',
-			        'remember'       => true,
-			        'value_username' => NULL,
-			        'value_remember' => true
-			); ?> 
+			<?php echo do_shortcode('[wppb-login]'); ?>
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

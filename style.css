@@ -473,7 +473,7 @@ h1.entry-title {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a.button {
+a.button, .piereg_submit_button input, .piereg_submit_button input:focus  {
 	padding: 10px;
 	width: 40%;
 	display: block;
@@ -484,11 +484,19 @@ a.button {
 	text-decoration: none;
 	font-family: "raleway";
 	font-size: 20px;
+	border-radius: 0px;
+	box-shadow: none;
+	border-color: rgba(0,0,0,0);
+}
+.piereg_submit_button input, .piereg_submit_button input:focus  {
+	width: 68% !important;
 }
 
-a.button:hover {
+a.button:hover, .piereg_submit_button input:hover {
 	color: white;
 	background-color:#82a7bb;
+	box-shadow: none;
+	border-color: rgba(0,0,0,0);
 }
 
 @media screen and (max-width: 680px) {
@@ -1050,6 +1058,7 @@ header.my-account h2.active {
 
 .my-account-section.active {
 	display: block;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------

@@ -27,12 +27,12 @@ get_header(); ?>
 
 		<?php endwhile; // end of the loop. ?>			
 		
-		<?php echo do_shortcode('[wppb-register]'); ?>
+		<?php echo do_shortcode('[pie_register_form]'); ?>
 		
 		</div>		
 		<div class="log-in-right my-account-section">
 			<h2>Already Registered? Log in Here</h2>
-			<?php echo do_shortcode('[wppb-login]'); ?>
+			<?php echo do_shortcode('[pie_register_login]'); ?>
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

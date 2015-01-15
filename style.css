@@ -828,6 +828,7 @@ ul#menu-mobile-menu  {
 #primary {
 	width: 70%;
 	float: left;
+	margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -989,7 +990,7 @@ margin-top: 20px;
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .page-links {
@@ -1059,11 +1060,11 @@ article.contact_posts {
 	width: 49%;
 	float: left;
 	border: 3px solid #01264b;
-	margin-top: 40px;
 	padding: 10px;
+	min-height: 232px;
 }
 
-article.contact_posts:nth-child(odd){
+article.contact_posts:nth-child(even){
 	margin-right: 2%;
 }
 
@@ -1091,11 +1092,15 @@ article.contact_posts:nth-child(odd){
 	  display: block;
   }
   
-  .contact_posts .entry-content, .contact_posts .entry-content a{
-	  color: #404040;
+  .contact_posts .entry-content, {
+  	color: #040404;
 	  text-decoration: none;
   }
 
+.contact_posts .entry-content a {
+		  color: #d24b3d;
+		  text-decoration: none;
+}
 
 @media (max-width: 960px) {
 	

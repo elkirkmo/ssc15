@@ -32,7 +32,6 @@
 		* html body { margin-top: 0px !important; }
 	}
 </style>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -50,7 +49,12 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-
+		<div class="sponsors">
+			<ul>
+				<li><?php the_field('sponsor_logo_header')?></li>
+				<li><?php the_field('venue_logo_header')?></li>
+			</ul>
+		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Primary Menu', 'ssc15' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

@@ -190,6 +190,12 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 include_once('advanced-custom-fields/acf.php');
+include_once('acf-options-page/acf-options-page.php');
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
 /*
 if(function_exists("register_field_group"))
 {
@@ -433,37 +439,6 @@ function wti_loginout_menu_link( $items, $args ) {
 }
    return $items;
 }
-
-/*
-	Adding custom profile fields to use in registration
-
-				Gender
-				First Name
-				Middle Name
-				Last Name
-				Birth Date(dd dates)
-				Passport number (if intl)
-				Passport country (if intl)(dd)
-				Driver License #
-				Driver License State(dd)
-				Driver License Expiration(dd dates)
-				Username
-				Password
-				Verify Password
-				Email Address
-				Street Address
-				City
-				State(dd)
-				Postal Code
-				Country(dd)
-				Phone Number
-				Alt Phone Number
-				Cell Phone
-				Fax Number
-				Shirt Size (dd)
-				
-				*/
-
 
 function modify_contact_methods($profile_fields) {
 

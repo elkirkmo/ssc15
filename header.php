@@ -51,8 +51,8 @@
 		</div>
 		<div class="sponsors">
 			<ul>
-				<li><?php the_field('sponsor_logo_header')?></li>
-				<li><?php the_field('venue_logo_header')?></li>
+				<li class="primary-sponsor"><a href="<?php the_field('sponsor_logo_link', 'option')?>" target="_blank"><img src="<?php the_field('sponsor_logo_header', 'option')?>" /></a></li>
+				<li class="venue-sponsor"><a href="<?php the_field('venue_logo_link', 'option')?>" target="_blank"><img src="<?php the_field('venue_logo_header', 'option')?>" /></a></li>
 			</ul>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">

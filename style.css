@@ -186,6 +186,37 @@ h6 {
 	clear: both;
 }
 
+h1 {
+	font-size: 50px;
+	font-family: "raleway";
+	text-align: center;
+	color: #01264b;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	color: #01264b;
+}
+
+h3 {
+		font-weight: bold;
+	color: #d24b3d;
+	font-size: 23px;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #82a7bb;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -220,6 +251,11 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+}
+
+a {
+	color: #d24b3d;
+	text-decoration: none;
 }
 
 code,
@@ -282,11 +318,12 @@ ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
+	margin-left: 1.5em;
 }
 
 ol {
-	list-style: decimal;
+	list-style: upper-alpha;
 }
 
 li > ul,
@@ -433,7 +470,7 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 h1.site-title {
-	margin-top: 20px;
+	text-align: left;
 }
 
 h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
@@ -444,12 +481,23 @@ h1.site-title a, h1.site-title a:visited, h1.site-title a:hover {
 	margin-top: 40px;
 }
 
+h1.entry-title a:hover {
+	color: #d24b3d;
+}
 
-h1.entry-title {
+
+h1.entry-title a{
 	font-size: 50px;
 	font-family: "raleway";
 	text-align: center;
+	color: #01264b;
 	
+}
+
+h2.site-description {
+	font-size: 16px;
+text-align: left;
+font-weight: normal;
 }
 
 
@@ -473,7 +521,10 @@ h1.entry-title {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a.button, .piereg_submit_button input, .piereg_submit_button input:focus  {
+
+
+
+a.button, .piereg_submit_button input, .piereg_submit_button input:focus, .piereg_loginform p.submit input, .piereg_loginform p.submit input:focus  {
 	padding: 10px;
 	width: 40%;
 	display: block;
@@ -828,6 +879,34 @@ ul#menu-mobile-menu  {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+.site-branding {
+	width: 70%;
+	float: left;
+	display: block;
+}
+.sponsors {
+	width: 30%;
+	float: right;
+	display: block;
+}
+
+.sponsors ul {
+	float: right;
+}
+
+.sponsors li{
+	list-style-type: none;
+	display: inline-block;
+	width: 100px;
+}
+
+#colophon .sponsors {
+	float: left;
+}
+
+#colophon .sponsors li.venue-sponsor {
+	width: 50px;
+}
 
 /*--------------------------------------------------------------
 10.0.1 Primary Section Styling
@@ -1010,11 +1089,13 @@ margin-top: 20px;
 /*--------------------------------------------------------------
 10.1.2 SSC Info	
 --------------------------------------------------------------*/
-.info ul li {
+
+.swiper-container ul, .swiper-container ul li {
 	list-style-type: none;
+	margin-left: 0;
 }
 
-.info li a {
+.swiper-container li a {
 	display: block;
 	width: 100%;
 	height: 45px;
@@ -1028,6 +1109,15 @@ margin-top: 20px;
 }
 
 
+article.bio img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.swiper-slide {
+	padding: 20px;
+	box-sizing: border-box;
+}
 
 /*--------------------------------------------------------------
 10.1.4 My Account / Login Page
@@ -1039,6 +1129,8 @@ header.my-account{
 }
 header.my-account h2 {
 	display: inline-block;
+	font-weight: normal;
+	font-size: 16px; 
 	width: 50%;
 	text-align: center;
 	background: #01264b;
@@ -1046,6 +1138,11 @@ header.my-account h2 {
 	padding: 10px 0;
 	margin: 0;
 	white-space: nowrap;
+}
+
+#view_profile h2, #edit_profile h2 {
+	font-weight: normal;
+	font-size: 16px; 
 }
 
 header.my-account h2.active {
@@ -1061,6 +1158,43 @@ header.my-account h2.active {
 	width: 100%;
 }
 
+a.login {
+	text-align: center;
+	color: #d24b3d;
+	text-decoration: none;
+	display: block;
+	margin: 0 auto;
+	padding-left: 20%;
+}
+
+.piereg_login_container .piereg_login_wrapper label {
+	width: 29%;
+	display: inline-block;
+}
+.piereg_loginform input{
+	width: 60%;
+	display: inline-block;
+}
+
+.piereg_login_container .piereg_login_wrapper input[type="checkbox"] {
+	width: 10%;
+}
+
+.piereg_login_container .piereg_login_wrapper p.forgetmenot label {
+	width: 20%;
+}
+
+.piereg_login_container .piereg_login_wrapper p#nav {
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.piereg_login_container .piereg_login_wrapper p#nav a{
+	color: #d24b3d;
+	text-decoration: none;
+}
 /*--------------------------------------------------------------
 10.1.6 Contact
 --------------------------------------------------------------*/
@@ -1093,6 +1227,13 @@ article.contact_posts:nth-child(even){
 	font-family: "Quattrocento";
 }
 
+.contact_posts header h2 {
+	font-size: 16px;
+	text-align: left;
+	font-weight: normal;
+	color: #01264b;
+}
+
  .contact-mobile {
 	  display: none;
   }
@@ -1109,6 +1250,20 @@ article.contact_posts:nth-child(even){
 .contact_posts .entry-content a {
 		  color: #d24b3d;
 		  text-decoration: none;
+}
+
+@media (min-width: 961px) and (max-width: 1350px ) {
+	article.contact_posts {
+		width: 100%;
+		margin: 20px auto;
+		display: block;
+		float: none;
+		padding: 10px;
+		}
+		
+		article.contact_posts:first-of-type{
+			margin-top: 0;
+		}
 }
 
 @media (max-width: 960px) {

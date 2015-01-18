@@ -3,20 +3,19 @@ jQuery(document).ready(function(){
 
 	jQuery(function(){
   var mySwiper = jQuery('.swiper-container').swiper({
-    //Your options here:
+  	pagination: '.pagination',
     mode:'horizontal',
     loop: true,
-    onFirstInit: function(swiper){
+    paginationClickable: true,
+    onSwiperCreated: function(swiper){
 	      jQuery('.swiper-container').css({height:''})
 		  //Calc Height
-		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height()})
-		  //ReInit Swiper
-		  //swiper.reInit();
+		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height() + 20})
     	},
     onSlideChangeEnd: function(){
 	      jQuery('.swiper-container').css({height:''})
 		  //Calc Height
-		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height()})
+		  jQuery('.swiper-container').css({height: jQuery('.swiper-slide-active').find('article').height() + 20})
 		  //ReInit Swiper
 		  mySwiper.reInit();
     	}
@@ -78,6 +77,11 @@ jQuery(document).ready(function(){
 	    jQuery(".my-account h2, .my-account-section").toggleClass("active");
 		
     });
+    
+//Log in here link at bottom of log in/reg page
+	jQuery("a.login").click(function(){
+		jQuery(".my-account h2, .my-account-section").toggleClass("active");
+	});
     
    jQuery("#primary").fitVids();
    jQuery(".home-video").css("visibility","visible");

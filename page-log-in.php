@@ -28,10 +28,10 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>			
 		
 		<?php echo do_shortcode('[pie_register_form]'); ?>
-		
+		<a href="#" class="login" title="Log In">Already a member? Log in here.</a>
 		</div>		
 		<div class="log-in-right my-account-section">
-			<h2>Already Registered? Log in Here</h2>
+			<h2>Already Registered? Click here to log in</h2>
 			<?php echo do_shortcode('[pie_register_login]'); ?>
 		</div>
 		</main><!-- #main -->

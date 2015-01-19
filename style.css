@@ -775,6 +775,10 @@ ul#menu-mobile-menu  {
 	.hamburger-menu {
 		display: block;
 	}
+	
+	#mobile_navigation li.right {
+		float: left;
+	}
 	}
 
 /*--------------------------------------------------------------
@@ -918,6 +922,10 @@ ul#menu-mobile-menu  {
 	margin-top: 20px;
 }
 
+.ee-icon {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 10.0.4 Secondary (Sidebar) Styling
 --------------------------------------------------------------*/
@@ -1027,6 +1035,25 @@ margin-top: 20px;
 	padding: 10px;	
 }
 
+@media (min-width: 1025px) and (max-width: 1205px){
+	.follow_button.instagram a, .follow_button.twitter a{
+		margin-top: 5px;
+		font-size: 13px;
+	}
+}
+
+ @media (min-width:961px) and (max-width: 1024px){
+	 .follow_button.twitter a{
+		margin-top: 5px;
+		font-size: 13px;
+	}
+	
+	.follow_button.instagram a {
+		margin-top: 5px;
+		font-size: 12px;
+	}
+ }
+
 @media (max-width: 960px) {
 	#primary {
 	width: 100%;
@@ -1037,7 +1064,7 @@ margin-top: 20px;
 
 .follow_button.instagram a{
 	margin-top: 5px;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 	}
@@ -1089,6 +1116,30 @@ margin-top: 20px;
 /*--------------------------------------------------------------
 10.1.2 SSC Info	
 --------------------------------------------------------------*/
+
+#main {
+	position: relative;
+}
+.arrow-left {
+  background: url("images/arrow-left.png") no-repeat left top;
+  background-size: cover;
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  width: 32px;
+  height: 32px;
+  z-index: 9999;
+}
+.arrow-right {
+	background: url("images/arrow-right.png") no-repeat left top;
+  background-size: cover;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  width: 32px;
+  height: 32px;
+  z-index: 9999;
+}
 
 .swiper-container ul, .swiper-container ul li {
 	list-style-type: none;

@@ -14,6 +14,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			 <a class="arrow-left" href="#"></a> 
+    <a class="arrow-right" href="#"></a>
 		<div class="swiper-container">
 			<div class="pagination">
 			</div>
@@ -64,6 +66,16 @@ get_header(); ?>
 	
 		<div class="entry-content">
 			<?php echo get_field('application_body'); ?>
+			<?php
+				if ( !is_user_logged_in() ) {
+						echo 'Please log in or create an account to apply.<br/>';
+						echo '<a href="'. get_field('login_link').'" class="button">Log in or Create Account</a>';
+					} else {
+						echo 'Click on one of the options below to start the application process.';
+						$eventid = get_field('event_shortcode');
+						echo do_shortcode( '[ESPRESSO_TICKET_SELECTOR event_id="'.$eventid.'"]');
+					}
+			?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-## -->
 				 <div class="swiper-slide"> 

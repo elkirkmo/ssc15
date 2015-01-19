@@ -21,6 +21,14 @@ jQuery(document).ready(function(){
     	}
     //etc..
   });
+    jQuery('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  jQuery('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
 });
 	
 	 jQuery(".hamburger-menu a").click(function() {

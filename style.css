@@ -524,13 +524,14 @@ font-weight: normal;
 
 
 
-a.button, .piereg_submit_button input, .piereg_submit_button input:focus, .piereg_loginform p.submit input, .piereg_loginform p.submit input:focus  {
+a.button, .piereg_submit_button input, .piereg_submit_button input:focus, .piereg_loginform p.submit input, .piereg_loginform p.submit input:focus, #cancel_registration  {
 	padding: 10px;
 	width: 40%;
 	display: block;
-	margin: 0 auto;
+	margin: 10px auto;
 	color: white;
 	background-color:#d24b3d ;
+	text-shadow: none;
 	text-align: center;
 	text-decoration: none;
 	font-family: "raleway";
@@ -904,12 +905,35 @@ ul#menu-mobile-menu  {
 	width: 100px;
 }
 
-#colophon .sponsors {
-	float: left;
+#colophon .sponsors {	
+	float: right;
+	margin-right: 50px;
 }
 
 #colophon .sponsors li.venue-sponsor {
 	width: 50px;
+}
+
+@media (max-width: 960px) {
+	.site-branding {
+		float: right;
+	}
+	.site-branding, .sponsors {
+		width: 100%;
+	}
+	
+	.sponsors {
+		position: absolute;
+		right: 10px;
+	}
+	
+	#colophon .sponsors {
+		position: relative;
+	}
+		
+	li.venue-sponsor {
+		width: 50px;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1141,12 +1165,12 @@ margin-top: 20px;
   z-index: 9999;
 }
 
-.swiper-container ul, .swiper-container ul li {
+.swiper-container ul, .swiper-container ul li, #view_profile ul, #view_profile ul li {
 	list-style-type: none;
 	margin-left: 0;
 }
 
-.swiper-container li a {
+.swiper-container li a, #view_profile li a {
 	display: block;
 	width: 100%;
 	height: 45px;
@@ -1173,6 +1197,15 @@ article.bio img {
 /*--------------------------------------------------------------
 10.1.4 My Account / Login Page
 --------------------------------------------------------------*/
+.dataTables_paginate {
+	margin-top: 10px;	
+	display: none;
+}
+
+#event_reg_theme h2, #table_length, #table_filter, #event_reg_theme .button-primary, #table_info, .bottom_settings input[type="checkbox"], .bottom_settings strong {
+	display: none;
+}
+
 header.my-account{
 	margin: 20px 0;
 	
@@ -1382,6 +1415,18 @@ article.contact_posts:nth-child(even){
 		  display: none;
 	  }
   }
+
+/*--------------------------------------------------------------
+10.1.7 Press
+--------------------------------------------------------------*/
+
+@media (max-width: 960px) {
+	
+.press ul li {
+	margin-bottom: 20px;
+}
+	}
+	
 
 /*--------------------------------------------------------------
 10.2 Asides

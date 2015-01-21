@@ -12,7 +12,6 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="sponsors">
-					<h6>Event sponsors:</h6>
 			<ul>
 				<li class="primary-sponsor"><a href="<?php the_field('sponsor_logo_link', 'option')?>" target="_blank"><img src="<?php the_field('sponsor_logo_header', 'option')?>" /></a></li>
 				<li class="venue-sponsor"><a href="<?php the_field('venue_logo_link', 'option')?>" target="_blank"><img src="<?php the_field('venue_logo_header', 'option')?>" /></a></li>

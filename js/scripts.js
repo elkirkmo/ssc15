@@ -86,6 +86,19 @@ jQuery(document).ready(function(){
 		
     });
     
+//Hide My Events if none are selected
+	if (jQuery(".my_events_table td").hasClass("dataTables_empty")){
+		jQuery("#configure_organization_form").hide();
+	} else {
+		jQuery(".app-links").hide();
+	}    
+	
+	
+	jQuery(".apply.button").on("click", function(){
+		jQuery("#event_espresso_registration_form").show();
+		jQuery(this).hide();
+	})
+    
 //Log in here link at bottom of log in/reg page
 	jQuery("a.login").click(function(){
 		jQuery(".my-account h2, .my-account-section").toggleClass("active");

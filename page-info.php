@@ -73,7 +73,7 @@ get_header(); ?>
 					} else {
 						echo 'Click on one of the options below to start the application process.';
 						$eventid = get_field('event_shortcode');
-						echo do_shortcode( '[ESPRESSO_TICKET_SELECTOR event_id="'.$eventid.'"]');
+						echo $eventid;
 					}
 			?>
 		</div><!-- .entry-content -->

@@ -123,5 +123,14 @@ jQuery(document).ready(function(){
 		}
 	});   
 	   
+	var url = document.createElement("a");
+	url.href = window.location.href;
+	console.log(url.search.length); 
+	
+	if (url.search.length > 1 && jQuery(".log-in-right")[0]){
+	    jQuery(".my-account h2, .my-account-section").toggleClass("active");
+	}  else if (jQuery(".piereg_login_error")[0]){
+		jQuery(".my-account h2, .my-account-section").toggleClass("active");
+	}
 	   
 });

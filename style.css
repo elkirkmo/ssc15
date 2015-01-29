@@ -1242,6 +1242,10 @@ header.my-account h2.active {
 	width: 100%;
 }
 
+.log-in-right h2 {
+	font-size: 20px;
+}
+
 a.login {
 	text-align: center;
 	color: #d24b3d;
@@ -1279,6 +1283,10 @@ a.login {
 	color: #d24b3d;
 	text-decoration: none;
 }
+
+#recaptcha_area {
+	float: left;
+}
 /*--------------------------------------------------------------
 10.1.6 Contact
 --------------------------------------------------------------*/
@@ -1291,7 +1299,7 @@ article.contact_posts {
 	min-height: 232px;
 }
 
-article.contact_posts:nth-child(even){
+article.contact_posts:nth-child(odd){
 	margin-right: 2%;
 }
 
@@ -1304,11 +1312,13 @@ article.contact_posts:nth-child(even){
 
 .contact_posts header {
 	display: inline-block;
+	width: 60%;
 }
 
 .contact_posts header h1 {
 	font-size: 30px;
 	font-family: "Quattrocento";
+	text-align: left;
 }
 
 .contact_posts header h2 {

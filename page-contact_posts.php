@@ -16,7 +16,7 @@ get_header(); ?>
 				$query = new WP_Query( array('post_type' => 'contact_posts', 'posts_per_page' => 10, 'order' => 'ASC' ) );
 				while ( $query->have_posts() ) : $query->the_post(); ?>
 				
-					<?php get_template_part( 'content', 'page-contact_posts' ); ?>
+					<?php get_template_part( 'content', 'single-contact_posts' ); ?>
 					
 				<?php endwhile; wp_reset_postdata();?>
 <?php endwhile; // end of the loop. ?>

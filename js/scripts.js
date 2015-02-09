@@ -129,7 +129,7 @@ jQuery(document).ready(function(){
 	
 	if (url.search.length > 1 && jQuery(".log-in-right")[0]){
 	    jQuery(".my-account h2, .my-account-section").toggleClass("active");
-	}  else if (jQuery(".piereg_login_error")[0]){
+	}  else if (jQuery(".log-in-right .piereg_login_error")[0]){
 		jQuery(".my-account h2, .my-account-section").toggleClass("active");
 	}
 	   

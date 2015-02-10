@@ -12,7 +12,9 @@
 		<h2>Edit Profile</h2>
 	</header>
 	<div id="view_profile" class="left view-profile my-account-section active">
-		<h3>Hi, <?php echo the_author_meta('first_name', $current_user->ID ); ?>!</h3>
+		<h3>Hi, <?php global $current_user;
+			      get_currentuserinfo();
+			       echo $current_user->user_firstname; ?>!</h3>
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php

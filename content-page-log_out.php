@@ -15,6 +15,12 @@
 		<h3>Hi, <?php global $current_user;
 			      get_currentuserinfo();
 			       echo $current_user->user_firstname; ?>!</h3>
+			       <?php if ( ! current_user_can( 'manage_options' )) {
+						     echo "You are viewing the theme";
+						} else {
+						     echo "<a class='button' href='".get_site_url()."/wp-admin/admin.php?page=events' title='Go to Wordpress Dashboard'>Administrator Backend</a>";
+						}
+					?>		
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php

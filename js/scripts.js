@@ -88,10 +88,17 @@ jQuery(document).ready(function(){
     
 //Hide My Events if none are selected
 	if (jQuery(".my_events_table td").hasClass("dataTables_empty")){
-		jQuery("#configure_organization_form").hide();
+		jQuery("#configure_organization_form, .my-events").hide();
+		
 	} else {
 		jQuery(".app-links").hide();
-	}    
+		jQuery(".my-events").show();
+	}
+	
+	jQuery(".my-events a.showLinks").click(function(){
+		jQuery(".my-events div").hide();
+		jQuery(".app-links").show();
+	});  
 	
 	
 	jQuery(".apply.button").on("click", function(){

@@ -103,6 +103,17 @@ jQuery(document).ready(function(){
 	jQuery("a.login").click(function(){
 		jQuery(".my-account h2, .my-account-section").toggleClass("active");
 	});
+	
+	jQuery("a.logout").click(function(){
+		if (jQuery(".admin.button").length === 0){
+			if (jQuery(".my_events_table td").hasClass("dataTables_empty")){			
+				alert("Your registration is incomplete! Please come back soon and complete both steps 1 and 2.")	
+			}
+		    else {
+				alert("You still need to send in the forms from Step 2 to complete registration.") 
+			}
+		}
+	});
     
    jQuery("#primary").fitVids();
    jQuery(".home-video").css("visibility","visible");

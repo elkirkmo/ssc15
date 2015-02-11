@@ -114,6 +114,10 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
+	
+	if (jQuery(".piereg_message").text() === "Thank you for your registration"){
+		jQuery(".my-account h2, .my-account-section").toggleClass("active");
+	}
     
    jQuery("#primary").fitVids();
    jQuery(".home-video").css("visibility","visible");

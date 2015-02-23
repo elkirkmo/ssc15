@@ -18,9 +18,9 @@
 <!-- <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
 
- <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style/idangerous.swiper.css">
+ <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() );?>/style/idangerous.swiper.css">
  <script src="https://platform.twitter.com/widgets.js"></script>
- <script defer src="<?php bloginfo('template_directory');?>/js/idangerous.swiper.js"></script>
+ <script defer src="<?php echo esc_url( get_template_directory_uri() );?>/js/idangerous.swiper.js"></script>
 <?php wp_head(); 
 	add_filter('show_admin_bar', '__return_false');	
 ?>
